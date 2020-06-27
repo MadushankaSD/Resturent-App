@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 export default axios.create({
-    baseURL:'https://developers.zomato.com/api/v2.1',
+    baseURL:'https://api.yelp.com/v3/businesses',
     headers:{
-        'user-key':'87bd7183570d7be0fe6ca6267ece35c3'
+        Authorization:'Bearer 1EVkvgpfdWzNX5QtCdSNIWIa30K4CqiIlpXxRgtlj2XOGFYJwgSDnpeOfrfacjUVisxLooeKa76R8I80hAhvsZAut-my5MpDuWAN_sZbk0xuDPsb-Js20uLJKtj2XnYx',
     }
 });

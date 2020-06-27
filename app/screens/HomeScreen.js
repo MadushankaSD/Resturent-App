@@ -10,9 +10,8 @@ const HomeScreen = () => {
     const [searchApi, results] = useResCollection();
 
     const filterResultsByPrice = (price) => {
-        //price= 1||2||3||4
         return results.filter(results => {
-            return results.restaurant.price_range === price;
+            return results.price === price;
         })
 
     }
@@ -21,15 +20,13 @@ const HomeScreen = () => {
         <SafeAreaView>
             <SearchBar state={term}
                        onChangeTerm={(newTerm) => setTerm(newTerm)}
-                       submit={() => searchApi()}
+                       submit={()=>searchApi(term)}
             />
-            <Text>We have {results.length} results</Text>
-            <ScrollView>
-                <ResultsList results={filterResultsByPrice(1)} title={'Cost Effective'}/>
-                <ResultsList results={filterResultsByPrice(2)} title={'Bit Pricier'}/>
-                <ResultsList results={filterResultsByPrice(3)} title={'Big Spender'}/>
-                <ResultsList results={filterResultsByPrice(4)} title={'Super Resturent'}/>
-            </ScrollView>
+            {/*<ScrollView>*/}
+                <ResultsList results={filterResultsByPrice("$")} title={'Cost Effective'}/>
+                <ResultsList results={filterResultsByPrice("$$")} title={'Bit Pricier'}/>
+                <ResultsList results={filterResultsByPrice("$$$")} title={'Big Spender'}/>
+            {/*</ScrollView>*/}
         </SafeAreaView>
     );
 }
