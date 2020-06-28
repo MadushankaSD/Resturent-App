@@ -1,9 +1,11 @@
 import React from 'react';
-import{createSwitchNavigator,createAppContainer} from 'react-navigation';
+import'react-native-gesture-handler'
+import{createAppContainer} from 'react-navigation';
+import {createStackNavigator} from "react-navigation-stack";
 import HomeScreen from "./app/screens/HomeScreen";
 import DetailScreen from "./app/screens/DetailScreen";
 
-const RootApp = createSwitchNavigator(
+const RootApp = createStackNavigator(
     {
         Home:HomeScreen,
         Detail:DetailScreen

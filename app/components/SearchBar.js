@@ -25,7 +25,7 @@ const SearchBar =({state,onChangeTerm,submit})=> {
 const style=StyleSheet.create({
 
     searchBar:{
-        marginTop:10,
+        marginTop:30,
         backgroundColor:'#F0EEEE',
         marginHorizontal:10,
         height:40,

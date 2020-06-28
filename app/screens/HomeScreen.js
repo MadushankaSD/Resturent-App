@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StyleSheet, SafeAreaView, Text, ScrollView} from 'react-native';
+import {StyleSheet,View, Text, ScrollView} from 'react-native';
 import SearchBar from "../components/SearchBar";
 import useResCollection from "../hooks/useResCollection";
 import ResultsList from "../components/ResultsList";
@@ -17,7 +17,7 @@ const HomeScreen = () => {
     }
 
     return (
-        <SafeAreaView>
+        <View>
             <SearchBar state={term}
                        onChangeTerm={(newTerm) => setTerm(newTerm)}
                        submit={()=>searchApi(term)}
@@ -27,7 +27,7 @@ const HomeScreen = () => {
                 <ResultsList results={filterResultsByPrice("$$")} title={'Bit Pricier'}/>
                 <ResultsList results={filterResultsByPrice("$$$")} title={'Big Spender'}/>
             {/*</ScrollView>*/}
-        </SafeAreaView>
+        </View>
     );
 }
 

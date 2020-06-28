@@ -14,6 +14,7 @@ const ResultsDetail = ({result}) => {
 
 var style = StyleSheet.create({
     container:{
+        marginTop: 20,
       marginBottom:10,
       marginLeft:10
     },

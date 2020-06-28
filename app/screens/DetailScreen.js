@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import {StyleSheet, SafeAreaView, Text,FlatList,Image} from 'react-native';
+import {StyleSheet, View, Text,FlatList,Image} from 'react-native';
 import yelp from "../api/yelp";
 
 
@@ -23,7 +23,7 @@ const DetailScreen = ({navigation}) => {
     }
 
     return (
-        <SafeAreaView style={style.container}>
+        <View style={style.container}>
             <Text style={style.text}>{result.name}</Text>
             <FlatList
                 data={result.photos}
@@ -34,7 +34,7 @@ const DetailScreen = ({navigation}) => {
                 }
             />
 
-        </SafeAreaView>
+        </View>
     );
 }
 
